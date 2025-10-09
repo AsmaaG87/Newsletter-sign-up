@@ -1,0 +1,357 @@
+/* Global Style */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #242742;
+    color: #242742;
+}
+/* Container */
+.container {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    margin: 0 auto;
+    background-color: #ffffff;
+    
+}
+ .content-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;  
+    
+ }
+ .text-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    padding: 0.5em 1.5em;
+ }
+ .text-sec h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1;
+    text-align: left;
+    font-weight: 800;
+ }
+ .text-sec p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+
+ }
+ .text-sec ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0.5em;      
+ }
+
+ .text-sec li {
+    position: relative;
+    padding-left: 2em;
+    padding-bottom: 0.5em;
+    font-size: 1em;
+}
+ .text-sec li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0; 
+    background-image: url("../images/icon-list.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 21px;
+    height: 21px;    
+}
+ .form-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 0 1.5em 1.5em 1.5em;
+   
+ }
+ .form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+ }
+ .form-content .email-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.5;   
+ }
+ .form-content .email-input {
+   padding: 1em 1.5em;
+   border-radius: 8px;
+   border: 1px solid #949494;
+   width: 327px;
+   height: 56px;
+   margin: 0;
+ }
+ .email-input::placeholder {
+   color: #949494;
+   font-size: 1rem;
+ }
+  .submit-btn button{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 8px;
+   background-color: #242742;
+   color: #ffffff;
+   border: none;
+   height: 56px;
+   width: 327px;
+   padding: 0 1.5em;
+   margin-bottom: 0.625em;
+   font-size: 1rem;
+   line-height: 1.5;
+   cursor: pointer;
+ }
+
+  
+   /* Mobile Error Message  */
+
+   .form-content .error-message {
+      font-size: 0.75rem;
+      color: #FF6155;
+      font-weight: 800;
+      float: right;
+      line-height: 1.5;
+   }
+   .email-input.error {
+   border: 1px solid #FF6155;
+   background-color: #FFE8E6;
+   color: #FF6155;
+ }
+ .email-input.error::placeholder {
+   color: #FF6155;
+ }
+  
+ /* Active State  */
+ .email-input:hover,
+ .email-input:focus {
+   outline: none;
+   border: 1px solid #242742;
+   background-color: #ffffff;
+ }
+  /* Autocomplete State */
+
+   .email-input:-webkit-autofill,
+   .email-input:-webkit-autofill:hover,
+   .email-input:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+      box-shadow: 0 0 0px 1000px #ffffff inset;
+      transition: background-color 5000s ease-in-out 0s;
+}
+ 
+ /* Success State */
+  
+ .success-msg {
+
+   width: 375px;
+   margin: 3em auto;
+   display: flex;
+   flex-direction: column;
+   background-color: #ffffff;
+   padding: 2em;
+   align-items: center;
+   
+ }
+ .success-icon {
+   margin: 0;
+   padding: 0;
+   width: 64px;
+   height: 64px;
+
+ }
+ .success-content {
+   max-width: 327px;
+   display: flex;
+   flex-direction: column;
+   gap: 2em;
+   padding: 0;
+   margin: 4em auto 0 auto;
+ }
+ .success-content h2 {
+   font-size: 2.5rem;
+   margin: 0;
+   text-align: left; 
+ }
+ .success-content p {
+   margin: 0;
+   font-size: 1rem;
+   line-height: 1.5;
+ }
+ .success-content .user-email {
+   font-weight: 800;
+ }
+ .success-btn button {
+   width: 327px;
+   height: 56px;
+   border-radius: 8px;
+   border: none;
+   background-color: #242742;
+   color: #ffffff;
+   font-size: 1rem;
+   font-weight: 600; 
+   margin: 15em auto 0 auto;
+   padding: 0;
+   cursor: pointer;
+ }
+  .success-msg {
+    display: none;
+ }
+.tablet-img-container {
+    display: none;
+ }
+.desktop-img-container {
+    display: none;
+ }
+  /* Footer Design */
+   footer {
+      color: #ffffff;
+      text-align: center;
+      font-weight: 500;
+      margin: 1em auto;
+   }
+   footer a {
+      text-decoration: none;
+      color: #949494;
+   }
+   footer a:hover,
+   footer a:focus {
+      color: #FFE8E6;
+      text-decoration: underline;
+   }
+ 
+    /* Tablet Design */
+ @media only screen and (min-width: 768px) {
+   .img-container {
+      display: none;
+   }
+   .tablet-img-container {
+      display: flex;
+   }
+   .container {
+     width: 608px;
+     padding: 2.5em;
+     border-radius: 36px;
+     background-color: #ffffff;
+     margin: 3em auto;
+   }
+   .content-sec {
+      width: 528px;
+      gap: 2.5em;
+      padding: 0;   
+   }
+   .text-sec h1 {
+      font-size: 3.5rem;
+      text-align: left;
+      line-height: 56px;
+   }
+   .form-sec {
+      width: 528px;   
+      display: flex;
+      gap: 1em;
+      padding: 0;
+   }
+   .form-content {
+      gap: 1em;
+      padding: 0;
+   }
+   .form-content .email-input {
+      width: 528px;
+   }
+   .submit-btn button {
+      width: 528px;   
+   }
+  
+   /* Success State */
+   .success-msg {
+      width: 504px;
+      max-height: 520px;
+      border: 1px solid #242742;
+      border-radius: 36px;
+      padding: 3em;
+      display: none;
+      flex-direction: column;
+      gap: 0.5em;
+      background-color: #ffffff;
+   }
+   .success-icon {
+     padding: 0.5em 0.5em;
+     margin-left: -8px;
+   }
+   .success-content {
+      width: 376px;
+      max-height: 400px;
+      display: flex;
+      gap: 1em;
+      padding: 0;
+      margin: 0 auto;
+   }
+   .success-content h2 {
+      font-size: 3rem;
+      margin: 0;  
+      padding: 0; 
+   }
+   .success-btn button {
+      width: 367px;
+      gap: 0.5em;
+      margin-top: 1.5em;   
+   } 
+  
+ }
+
+   /* Desktop Design */
+ @media only screen and (min-width: 1440px) {
+   .tablet-img-container {
+    display: none;
+ }
+   .desktop-img-container {
+      display: flex;
+   }
+   .container {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 904px;
+      gap: 4em;
+      border-radius: 36px;
+      padding: 2em;
+      margin: 9em auto;
+   }
+   .content-sec {
+      max-width: 840px;  
+   }
+   .text-sec {
+     max-width: 376px;
+   }
+   .text-sec h1 {
+      font-size: 3rem;
+      margin-top: 1em;
+   }
+   .form-sec {
+      max-width: 376px;  
+   }
+   .form-sec .email-input{
+      width: 376px;
+   }
+   .submit-btn button {
+      width: 376px;
+      /*padding: 1em 4.5em;*/ 
+   }
+   .submit-btn button:hover,
+   .success-btn button:hover {
+      background: linear-gradient(rgb(255,106,58), rgb(255,82,123));  
+   }
+ }
+    
